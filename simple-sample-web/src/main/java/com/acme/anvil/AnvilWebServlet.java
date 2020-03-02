@@ -22,8 +22,7 @@ import com.acme.anvil.vo.Item;
 import weblogic.servlet.annotation.WLInitParam;
 import weblogic.servlet.annotation.WLServlet;
 
-@WLServlet (name = "AnvilWebServlet", mapping = {"/AnvilWebServlet"}, 
-initParams = {}, runAs = "")
+@WLServlet (name = "AnvilWebServlet", mapping = {"/AnvilWebServlet"}, initParams = {}, runAs = "")
 public class AnvilWebServlet extends HttpServlet {
 
 	private static final Logger LOG = Logger.getLogger(AnvilWebServlet.class.getName());

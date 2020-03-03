@@ -8,6 +8,7 @@ import javax.ejb.SessionContext;
 
 import weblogic.i18n.logging.NonCatalogLogger;
 
+
 public class ProductCatalogBean implements SessionBean {
 
 	private static final NonCatalogLogger LOG = new NonCatalogLogger("ProductCatalogBean");

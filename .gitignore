@@ -21,3 +21,4 @@ bin
 /graph/tests/src/test/java/org/jboss/windup/graph/test/polymorf/SubtypeQueryTest.java
 *.orig
 /localRepo/
+.vscode/settings.json

@@ -42,4 +42,30 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>openshift</id>
+			<repositories>
+				<repository>
+					<id>bucketrepo</id>
+					<url>http://bucketrepo:80/bucketrepo/</url>
+					<releases />
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>bucketrepo</id>
+					<url>http://bucketrepo:80/bucketrepo/</url>
+					<releases />
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+
 </project>

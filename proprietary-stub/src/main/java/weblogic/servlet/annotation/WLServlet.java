@@ -2,7 +2,7 @@ package weblogic.servlet.annotation;
 
 public @interface WLServlet {
    String name();
-   String runAs();
+   String runAs() default "";
    WLInitParam[] initParams();
    String[] mapping();
 }

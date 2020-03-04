@@ -3,3 +3,24 @@
 This repository contains a single small sample application, suitable for demonstrating
 a simple migration to JBoss EAP 7+.
 
+=== OpenShift Deployment (to EAP after code migrated)
+
+To deploy:
+```
+oc new-project migration-demo
+
+oc process openshift//eap72-basic-s2i APPLICATION_NAME=migrated-app SOURCE_REPOSITORY_URL=https://github.com/ippul/db-rhamt-demo.git SOURCE_REPOSITORY_REF=demo/demo-codeready-plugin CONTEXT_DIR= ARTIFACT_DIR=simple-sample-app/target | oc create -f -
+
+oc set probe dc/migrated-app --readiness --get-url=http://:8080/simple-sample-web --initial-delay-seconds=30
+
+oc set probe dc/migrated-app --liveness --get-url=http://:8080/simple-sample-web --initial-delay-seconds=30
+```
+
+To test:
+
+https://migrated-app-migration-demo.apps.cluster-lab-58f5.lab-58f5.sandbox506.opentlc.com//simple-sample-web
+
+To remove:
+```
+oc delete all -l application=migrated-app
+```

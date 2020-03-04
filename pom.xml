@@ -48,7 +48,7 @@
 			<repositories>
 				<repository>
 					<id>bucketrepo</id>
-					<url>http://bucketrepo:80/bucketrepo/</url>
+					<url>http://bucketrepo.dev-tools.svc.cluster.local:80/bucketrepo/</url>
 					<releases />
 					<snapshots>
 						<enabled>false</enabled>
@@ -58,7 +58,7 @@
 			<pluginRepositories>
 				<pluginRepository>
 					<id>bucketrepo</id>
-					<url>http://bucketrepo:80/bucketrepo/</url>
+					<url>http://bucketrepo.dev-tools.svc.cluster.local:80/bucketrepo/</url>
 					<releases />
 					<snapshots>
 						<enabled>false</enabled>

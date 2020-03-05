@@ -6,12 +6,13 @@ import javax.ejb.EJBException;
 import javax.ejb.SessionBean;
 import javax.ejb.SessionContext;
 
-import weblogic.i18n.logging.NonCatalogLogger;
+import java.util.logging.Logger;
 
 
 public class ProductCatalogBean implements SessionBean {
-
-	private static final NonCatalogLogger LOG = new NonCatalogLogger("ProductCatalogBean");
+	
+	private  Logger LOG = Logger.getLogger("MyLogger");
+	
 
 	private SessionContext sessionContext;
 

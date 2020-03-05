@@ -8,6 +8,7 @@ import javax.ejb.EJBException;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,9 +18,7 @@ import org.apache.commons.lang.StringUtils;
 import com.acme.anvil.service.ItemLookupLocal;
 import com.acme.anvil.vo.Item;
 
-import weblogic.servlet.annotation.WLServlet;
-
-@WLServlet (name = "AnvilWebServlet", mapping = {"/AnvilWebServlet"}, initParams = {})
+@WebServlet (name = "AnvilWebServlet", urlPatterns = {"/AnvilWebServlet"}, initParams = {})
 public class AnvilWebServlet extends HttpServlet {
 
 	private static final Logger LOG = Logger.getLogger(AnvilWebServlet.class.getName());
